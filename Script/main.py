@@ -37,8 +37,8 @@ for (cliente, cnpj), grupo in clientes:
         itens.append({
             'produto': row['Produto'],
             'qtde': int(qtde),
-            'preco_unit': f'{preco_unit:.2f}',
-            'total': f'{total:.2f}'
+            'preco_unit': f'{preco_unit:.2f}'.replace('.', ','),
+            'total': f'{total:.2f}'.replace('.', ',')
         })
 
         total_bruto += total
